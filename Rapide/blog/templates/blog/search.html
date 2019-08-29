@@ -1,0 +1,14 @@
+{% extends 'blog/base.html'%}
+
+{% block content %}
+	{% if fich|length_is:"0" %}
+	<h1>
+		Aucun Resultas 
+	</h1>
+	{% else %}
+   {% for fich in fich %}
+   		<h1> {{fich.title}}</h1>
+
+   	{% endfor %}
+{% endif %}
+{% endblock %}

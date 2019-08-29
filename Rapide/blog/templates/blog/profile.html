@@ -1,0 +1,77 @@
+{% extends 'blog/base.html'%}
+
+{% block content %}
+<br><br>
+    
+
+<div class="card mb-3" >
+  <div class="row no-gutters">
+    <div class="col-md-2">
+      <img src="{{ user.profile.image.url  }}" class="card-img" alt="...">
+    </div>
+    <div class="col-md-10">
+      <div class="card-body">
+      	 <h5 class="card-title"> Mr/Mmd {{ user.profile.Nom }} {{ user.profile.Prenom }} </h5>
+      	 <div class="row" style="line-height: 2em;">
+       
+        <br>
+        <article class="col-md-6">
+        <ul>
+        	<li>
+        		C.I.N     :BL142435
+        	</li>
+        	<li>
+        		Né le     :{{ user.profile.Date_de_naissance  }}
+        	</li>
+        	<li>
+        		à          : {{ user.profile.lieu_Naissance }}
+        	</li>
+        	<li>
+        		Adresse    : {{ user.profile.Adresse }}
+        		</li>
+        </ul>
+        </article>
+        <article class="col-md-6">
+        <ul>
+        	<li>
+        		C.I.N     :BL142435
+        	</li>
+        	<li>
+        		Né le     :{{ user.profile.Date_de_naissance  }}
+        	</li>
+        	<li>
+        		à          : {{ user.profile.lieu_Naissance }}
+        	</li>
+        	<li>
+        		Adresse    : {{ user.profile.Adresse }}
+        		</li>
+        </ul>
+        </article>
+        <p class="card-text"><small class="text-muted"></small></p>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-lg-12">
+    <hr>
+    <h2 class="intro-text text-center">Tous Nos Fichier 
+    </h2>
+    <hr class="detail-separator">
+</div>
+ <div class="row">
+
+{% for fich in fichier %}
+    {% if user.is_authenticated %}
+    <div class="col-sm text-center " >
+        <a href="{% url 'pdf' fich_id=fich.id %}"> 
+            <img src="{{fich.picture.url}}" alt="{{ fich.title }}"> </a>
+    <h3>  <a href="{% url 'pdf' fich_id=fich.id %}"> {{ fich.title }}</a></h3>
+    </div>
+
+ {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %}
+  {% endif %}
+{% endfor %}
+</div>
+    
+{% endblock %}
