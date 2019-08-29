@@ -1,0 +1,78 @@
+*{
+margin:0;
+padding: 0;
+
+}
+body{
+position: absolute;
+left: 18%;
+right: 19%;
+background-image: url(1.jpg);
+background-size: cover;
+height: 190%;
+-webkit-box-shadow: -20px -5px 93px 55px rgba(35,46,39,1);
+-moz-box-shadow: -20px -5px 93px 55px rgba(35,46,39,1);
+box-shadow: -20px -5px 93px 55px rgba(35,46,39,1);
+
+}
+.content-section form{
+	border: 1px solid black ;
+	padding: 50px 60px;
+	margin-top: 20vh;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.53);
+} 
+nav {
+	margin-top: 25px;
+	font-family: Century Gothic;
+}
+.title {
+	position: absolute;
+	top: 31%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.title h1{
+	color: rgba(123, 106, 106, 0.9);
+	font-size: 60px;
+	font-family: Century Gothic;
+}
+.button{
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.button .btn{
+	padding: 10px 30px;
+	text-decoration: none;
+}
+a{
+	text-decoration: none;
+}
+.card{
+    background-color: transparent;
+}
+.card-img {
+    width: 105%;
+    height: 100%;
+ }
+ article ul  {
+ 	text-decoration: none;
+ }
+ hr {
+    max-width: 35%;
+    border-color: #999999;
+    margin-left: 33%;
+}
+
+.intro-text {
+font-family: Century Gothic;
+font-size: 40px;
+font-weight: 300;
+color: #999999;
+}
+.detail-separator {
+  padding-bottom: 25px;
+}
